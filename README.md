@@ -5,8 +5,9 @@ The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mm
 ## Outline
 * [I. Prerequisites](#1)
 * [II. Post-experiment Survey Questions](#2)
-* [III. User Study Instruction](#3)
-* [IV. Running BiGuide on Client and Server Devices](#4)
+* [III. User Study Instructions](#3)
+* [IV. Dataset](#4)
+* [V. Running BiGuide on Client and Server Devices](#5)
 
 
 #### <span id="1">I. Prerequisites
@@ -21,10 +22,28 @@ Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites.
   * Q6: BiGuide made me confident in that I was collecting useful data.
   * Q7: FreGuide made me confident in that I was collecting useful data.
   * Q8: BiGuide made me change poses, locations, and angles more frequently.
+    
 #### <span id="3">III. User Study Instructions
-Follow the instructions at (https://github.com/open-mmlab/mmyolo).
+Follow the instructions in indoor scenario bellow:
+##### Intro:
+The goal of this experiment is to collect diverse data to train a machine learning model that can detect the class and the bounding box of indoor objects. Seven indoor objects are included in this experiment. They are located in 7 different places in the lab. 
+##### Instructions:
+Users will collect images by two systems: FreGuide and BiGuide.
+For FreGuide:
+* Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
+* Users can tilt their phone or change their position as they want.
+* Users need to take 20 images per object. 
+For BiGuide system:
+* Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
+* Users can tilt their phone or change their position as they want.
+* When receiving guidance from the system, users need to follow the guidance to take the photo.
+* Users need to take 20 images per object. 
+Note: After the user study, the model will be trained offline using collected data to compare their performance.
 
-#### <span id="4">IV. Running BiGuide on Client and Server Devices
+#### <span id="4">IV. Dataset
+Our collected dataset and the annotations are in "./Server/data/"
+
+#### <span id="5">V. Running BiGuide on Client and Server Devices
 ##### 1. Running BiGuide on Server
 ```
  uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
