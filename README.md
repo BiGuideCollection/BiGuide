@@ -1,6 +1,6 @@
 This repository contains the code for the **SenSys 2023** submitted paper: *"[BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices]"*. 
 
-The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mmyolo)
+The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mmyolo).
 
 ## Outline
 * [I. Prerequisites](#1)
@@ -13,11 +13,14 @@ The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mm
 Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites.
 
 #### <span id="2">II. Post-experiment Survey Questions
-  * Dell XPS 8930 desktop with Intel (R) Core (TM) i7-9700K CPU@3.6GHz and NVIDIA GTX 1080 GPU, and a Lenovo Legion 5 laptop (with an AMD Ryzen 7 4800H CPU and an NVIDIA
-GTX 1660 Ti GPU) using a virtual machine with 4-core CPUs and 8GB of RAM.
-  * Ubuntu 18.04LTS.
-  * OpenCV 3.4.2.
-  * Eigen3 3.2.10.
+  * Q1: The BiGuide guidance content was easy to understand.
+  * Q2: The BiGuide guidance itself was easy to follow.
+  * Q3: The BiGuide guidance displayed fast after pressing the "take the image button".
+  * Q4: BiGuide was helpful for collecting diverse data.
+  * Q5: FreGuide was helpful for collecting diverse data.
+  * Q6: BiGuide made me confident in that I was collecting useful data.
+  * Q7: FreGuide made me confident in that I was collecting useful data.
+  * Q8: BiGuide made me change poses, locations, and angles more frequently.
   * 
 #### <span id="3">III. User Study Instruction
 Follow the instructions in (https://github.com/open-mmlab/mmyolo).
