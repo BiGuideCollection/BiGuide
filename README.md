@@ -21,18 +21,13 @@ Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites.
   * Q6: BiGuide made me confident in that I was collecting useful data.
   * Q7: FreGuide made me confident in that I was collecting useful data.
   * Q8: BiGuide made me change poses, locations, and angles more frequently.
-  * 
-#### <span id="3">III. User Study Instruction
-Follow the instructions in (https://github.com/open-mmlab/mmyolo).
+#### <span id="3">III. User Study Instructions
+Follow the instructions at (https://github.com/open-mmlab/mmyolo).
 
 #### <span id="4">IV. Running BiGuide on Client and Server Devices
 ##### 1. Running BiGuide on Server
 ```
- cd AdaptSLAM/Edge-assisted AdaptSLAM
- chmod +x build.sh
- ./build.sh
+ uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
  ```
  ##### 2. Running BiGuide on Mobile Devices
-```
-./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml V102FileDirectory ./Examples/Monocular/EuRoC_TimeStamps/V102.txt dataset-V102_mono
-```
+Directly build the app through Unity with the code in "APP.zip"
