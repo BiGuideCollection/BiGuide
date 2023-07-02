@@ -32,7 +32,8 @@ Users will collect images by two systems: FreGuide and BiGuide.
 For FreGuide:
 * Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
 * Users can tilt their phone or change their position as they want.
-* Users need to take 20 images per object. 
+* Users need to take 20 images per object.
+  
 For BiGuide system:
 * Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
 * Users can tilt their phone or change their position as they want.
@@ -41,7 +42,7 @@ For BiGuide system:
 Note: After the user study, the model will be trained offline using collected data to compare their performance.
 
 #### <span id="4">IV. Dataset
-Our collected dataset and the annotations are in "./Server/data/"
+Our collected data samples and the annotations samples are in "./Server/data/". Will release the full dataset in Oct.2023.
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
 ##### 1. Running BiGuide on Server
