@@ -24,9 +24,9 @@ Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites.
   * Q8: BiGuide made me change poses, locations, and angles more frequently.
     
 #### <span id="3">III. User Study Instructions
-Follow the instructions in indoor scenario bellow:
+The instruction for indoor scenario is the same as the instruction for wildlife exhibits scenario. We take the instructions in indoor scenario below for instance:
 ##### Intro:
-The goal of this experiment is to collect diverse data to train a machine learning model that can detect the class and the bounding box of indoor objects. Seven indoor objects are included in this experiment. They are located in 7 different places in the lab. 
+The goal of this experiment is to collect diverse data to train a machine-learning model that can detect the class and the bounding box of indoor objects. Seven indoor objects are included in this experiment. They are located in 7 different places in the lab. 
 ##### Instructions:
 Users will collect images by two systems: FreGuide and BiGuide.
 For FreGuide:
@@ -43,6 +43,20 @@ Note: After the user study, the model will be trained offline using collected da
 
 #### <span id="4">IV. Dataset
 Our collected data samples and the annotations samples are in "./Server/data/". Will release the full dataset in Oct.2023.
+The indoor dataset has the same structure as the wildlife exhibits dataset. We take the structure of indoor dataset below for instance:
+```
+indoor_coco/
+  -annotations/
+    -test_precollected_indoor.json
+    -train_biguide_indoor_user1.json
+    -train_biguide_indoor_user2.json
+    -...
+  -images/
+    -image1.jpg
+    -image2.jpg
+    -...
+
+```
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
 ##### 1. Running BiGuide on Server
