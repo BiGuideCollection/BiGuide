@@ -43,10 +43,10 @@ We assembled a set of questions in different categories for the post-experiment 
   * Q8: BiGuide made me change poses, locations, and angles more frequently.
     
 #### <span id="3">III. User Study Instructions
-During the user study, each participant began by reviewing a set of instructions we have prepared. The instructions for indoor scenario are the same as the instruction for wildlife exhibits scenario. We take the instructions in indoor scenario below for instance:
-##### Intro:
+During the user study, each participant began by reviewing a set of instructions we have prepared. The instructions for indoor scenario are the same as the instruction for wildlife exhibits scenario. We take the instructions in indoor scenario below for instance.
+##### Intro
 The goal of this experiment is to collect diverse data to train a machine-learning model that can detect the class and the bounding box of indoor objects. Seven indoor objects are included in this experiment. They are located in 7 different places in the lab. 
-##### Instructions:
+##### Instructions
 Users will collect images by two systems: FreGuide and BiGuide.
 For FreGuide:
 * Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
@@ -61,7 +61,7 @@ For BiGuide system:
 Note: After the user study, the model will be trained offline using collected data to compare their performance.
 
 #### <span id="4">IV. Dataset
-We share the data collected during the user study. Our collected data samples and the annotations samples are in "./Server/data/". Will release the full dataset in Oct.2023.
+We share the data collected during the user study. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Oct.2023.
 The indoor dataset has the same structure as the wildlife exhibits dataset. We take the structure of indoor dataset below for instance:
 ```
 indoor_coco/
@@ -71,8 +71,7 @@ indoor_coco/
     -train_biguide_indoor_user2.json
     -...
   -images/
-    -image1.jpg
-    -image2.jpg
+    -target_2023_MM_DD_hh_mm_ss_XXXXXX.jpg
     -...
 
 ```
