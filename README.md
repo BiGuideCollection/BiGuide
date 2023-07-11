@@ -12,7 +12,7 @@ The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mm
 
 #### <span id="1">I. Prerequisites
 Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites as follows.
-```
+
 conda create -n mmyolo python=3.8 pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -y
 conda activate mmyolo
 pip install openmim
@@ -25,6 +25,10 @@ cd mmyolo
 pip install -r requirements/albu.txt
 # Install MMYOLO
 mim install -v -e .
+```
+Or directly use mmyolo_env.yml to set up the environment.
+```
+conda env create -f mmyolo_env.yml
 ```
 
 #### <span id="2">II. Post-experiment Survey Questions
