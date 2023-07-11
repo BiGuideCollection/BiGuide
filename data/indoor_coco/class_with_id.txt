@@ -1,0 +1,7 @@
+1 mobile_phone
+2 scissors
+3 light_bulb
+4 tin_can
+5 ball
+6 mug
+7 remote_control
