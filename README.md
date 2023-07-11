@@ -78,9 +78,12 @@ indoor_coco/
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
 ##### 1. Running BiGuide on Server
+Change the path in UserStudy_BiGuide_indoor.py to your own path. Then run the command below.
 ```
 cd tools/
 uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
 ```
+Replace ```--host xxx.xxx.x.x --port xxxx``` with your own IP address and port number.
+
  ##### 2. Running BiGuide on Mobile Devices
 Directly build the app through Unity with the code in "APP.zip"
