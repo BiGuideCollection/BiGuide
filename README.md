@@ -61,20 +61,20 @@ For BiGuide system:
 Note: After the user study, the model will be trained offline using collected data to compare their performance.
 
 #### <span id="4">IV. Dataset
-We share the data collected during the user study in the indoor scenario and wildlife exhibits scenario.
+We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the indoor scenario and wildlife exhibits scenario.
 ##### Indoor scenario: 
-We set up the indoor scenario in a typical office environment. 10 Users were guided on collecting data in this environment. We included seven object classes: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in seven distinct locations within a controlled environment with stable lighting conditions (see Figure 1). Users moved around different locations to collect the images of the objects.
+We set up the indoor scenario in a typical office environment. 10 users were guided to collect 20 images for each object in this environment. We included seven object classes: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in seven distinct locations within a controlled environment with stable lighting conditions (see Figure 1). Users moved around different locations to collect the images of the objects. 
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/7abc914f-ea9e-4a2a-9c44-9c7d1d63c6b9" width="500" title="Figure 1. Example images of 7 objects positioned in 7 locations in the indoor scenario. These objects were placed in a controlled environment with stable lighting conditions."/>
 </p>
 
 ##### Wildlife exhibits scenario: 
-We set up the wildlife exhibits scenario in a local wildlife center. This scenario involved outdoor scenes with dynamic objects, specifically lemurs. 10 Users were tasked with capturing images of three lemur species showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur, as depicted in Figure 2. Different lemur species were housed in separate exhibits within the center, requiring users to move between the exhibits. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions.
+We set up the wildlife exhibits scenario in a local wildlife center. This scenario involved outdoor scenes with dynamic objects, specifically lemurs. 10 users were tasked with capturing 20 images for each lemur species. Three lemur species were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur, as depicted in Figure 2. Different lemur species were housed in separate exhibits within the center, requiring users to move between the exhibits. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions.
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" title="Figure 2.Example images of 3 lemur species enclosed in 3 distinct exhibits in the wildlife exhibits scenario. Images obtained in this scenario are more complex due to lemurs’ varying poses and sizes, as well as the diverse backgrounds."/>
 </p>
 
-Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Oct.2023.
+Each user collected 20 images for each object in their assigned scenario. We manually labeled all data collected by users (4400 images in total). For the test set, we pre-collected 110 images for each class to capture images under varying lighting and weather conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set and 330 images in the wildlife test set. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Oct.2023.
 The indoor dataset has the same structure as the wildlife exhibits dataset. We take the structure of indoor dataset below for instance:
 ```
 indoor_coco/
@@ -88,6 +88,7 @@ indoor_coco/
     -...
   -class_with_id.txt
 ```
+The images are named by the time when they were captured.
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
 We take the indoor scenario as an example.
