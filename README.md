@@ -77,6 +77,7 @@ indoor_coco/
 ```
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
+We take the indoor scenario as an example.
 ##### 1. Running BiGuide on Server
 Change the path in UserStudy_BiGuide_indoor.py to your own path. Then run the command below.
 ```
