@@ -12,7 +12,7 @@ The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mm
 
 #### <span id="1">I. Prerequisites
 Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites as follows.
-'''
+```
 conda create -n mmyolo python=3.8 pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -y
 conda activate mmyolo
 pip install openmim
@@ -25,7 +25,7 @@ cd mmyolo
 pip install -r requirements/albu.txt
 /# Install MMYOLO
 mim install -v -e .
-'''
+```
 
 #### <span id="2">II. Post-experiment Survey Questions
 We assembled a set of questions in different categories for the post-experiment survey to gather feedback. For the category of data acquisition guidance (Q1-Q3), we asked the participants if the designed guidance was easy to understand and follow and the guidance generation was fast. For the category of system experience (Q4-Q8), we asked the participants if the system was helpful and if they felt more confident and more involved when using the system. All questions in these categories were answered on a five-point Likert scale. At the end of the survey, we asked the participants to identify their favorite system and to leave open-ended feedback about the overall experience.
