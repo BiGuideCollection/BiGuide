@@ -73,7 +73,7 @@ indoor_coco/
   -images/
     -target_2023_MM_DD_hh_mm_ss_XXXXXX.jpg
     -...
-
+  -class_with_id.txt
 ```
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
@@ -85,5 +85,5 @@ uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
 ```
 Replace ```--host xxx.xxx.x.x --port xxxx``` with your own IP address and port number.
 
- ##### 2. Running BiGuide on Mobile Devices
-Directly build the app through Unity with the code in "APP.zip"
+##### 2. Running BiGuide on Mobile Devices
+When the code on the server is running, you can build the mobile app through Unity with the code in "APP.zip"
