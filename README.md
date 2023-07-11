@@ -79,7 +79,8 @@ indoor_coco/
 #### <span id="5">V. Running BiGuide on Client and Server Devices
 ##### 1. Running BiGuide on Server
 ```
- uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
- ```
+cd tools/
+uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
+```
  ##### 2. Running BiGuide on Mobile Devices
 Directly build the app through Unity with the code in "APP.zip"
