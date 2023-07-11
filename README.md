@@ -21,9 +21,9 @@ mim install "mmcv>=2.0.0rc4,<2.1.0"
 mim install "mmdet>=3.0.0rc6,<3.1.0"
 git clone https://github.com/open-mmlab/mmyolo.git
 cd mmyolo
-/# Install albumentations
+# Install albumentations
 pip install -r requirements/albu.txt
-/# Install MMYOLO
+# Install MMYOLO
 mim install -v -e .
 ```
 
