@@ -101,4 +101,4 @@ uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
 Replace ```--host xxx.xxx.x.x --port xxxx``` with your own IP address and port number.
 
 ##### 2. Running BiGuide on Mobile Devices
-When the code on the server is running, you can build the mobile app through Unity with the code in "APP.zip"
+When the code on the server is running, you can build the mobile app through Unity with the code in "APP.zip". Then, enjoy your data collection!
