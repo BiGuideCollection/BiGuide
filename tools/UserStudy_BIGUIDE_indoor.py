@@ -109,7 +109,7 @@ testing_t_set_name="test_biguide_demo"
 save_train_name_list=[]
 save_test_name_list=[]
 
-both_guidance=["tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position", "change_the_object_pose", "tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position"]
+both_guidance=["tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position", "change_the_object_pose"]
 im_guidance=["tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position"]
 in_guidance=["change_the_object_pose"]
 
