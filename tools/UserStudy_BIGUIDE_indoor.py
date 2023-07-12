@@ -95,7 +95,7 @@ max_per_image=1
 class_idx_name={0:'mobile_phone',1:'scissors',2:'light_bulb',3:'tin_can',4:'ball',5:'mug',6:'remote_control'}
 idx_class_name={'mobile_phone':0,'scissors':1,'light_bulb':2,'tin_can':3,'ball':4,'mug':5,'remote_control':6}
 
-round_num=30#9#before is 20
+round_num=20
 round_cnt=0
 im_adj_cnt=0
 in_adj_cnt=0
