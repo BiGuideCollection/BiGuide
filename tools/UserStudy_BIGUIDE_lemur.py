@@ -95,7 +95,7 @@ max_per_image=1
 class_idx_name={0:'black-and-white-ruffed-lemur',1:'blue-eyed-black-lemur',2:'red-ruffed-lemur',3:'ring-tailed-lemur'}
 idx_class_name={'black-and-white-ruffed-lemur':0,'blue-eyed-black-lemur':1,'red-ruffed-lemur':2,'ring-tailed-lemur':3}
 
-round_num=30#9#before is 20
+round_num=20
 round_cnt=0
 im_adj_cnt=0
 in_adj_cnt=0
