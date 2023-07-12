@@ -109,7 +109,7 @@ testing_t_set_name="test_biguide_lemur_user10"
 save_train_name_list=[]
 save_test_name_list=[]
 
-both_guidance=["tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position", "wait_for_lemur_movement", "tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position"]
+both_guidance=["tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position", "wait_for_lemur_movement"]
 im_guidance=["tilt_your_phone", "raise_your_phone", "lower_your_phone", "change_your_position"]
 in_guidance=["wait_for_lemur_movement"]
 
