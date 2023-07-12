@@ -5,7 +5,7 @@ data_root = './data/user_study_lemur_all_coco/'  # absolute path to the dataset 
 # data_root = '/root/workspace/mmyolo/data/cat/'  # absolute path to the dataset dir inside the Docker container
 # the path of result save, can be omitted, omitted save file name is located under work_dirs with the same name of config file.
 # If a config variable changes only part of its parameters, changing this variable will save the new training file elsewhere
-work_dir = './work_dirs/lemur_coverage_lin_5'
+work_dir = './work_dirs/lemur_biguide_user1_5'
 
 # load_from can specify a local path or URL, setting the URL will automatically download, because the above has been downloaded, we set the local path here
 # since this tutorial is fine-tuning on the cat dataset, we need to use `load_from` to load the pre-trained model from MMYOLO. This allows for faster convergence and accuracy
@@ -60,7 +60,7 @@ train_dataloader = dict(
             type=_base_.dataset_type,
             data_root=data_root,
             metainfo=metainfo,
-            ann_file='annotations/train_coverage_lemur_lin_5.json',
+            ann_file='annotations/train_biguide_lemur_user1_5.json',
             data_prefix=dict(img='images/'),
             filter_cfg=dict(filter_empty_gt=False, min_size=32),
             pipeline=_base_.train_pipeline)))
@@ -76,11 +76,11 @@ test_dataloader = dict(
     dataset=dict(
         metainfo=metainfo,
         data_root=data_root,
-        ann_file='annotations/test_precollected_lemur.json',#test_indoor9_lin.json',
+        ann_file='annotations/test_precollected_lemur.json',
         data_prefix=dict(img='images/')))
 
 val_evaluator = dict(ann_file=data_root + 'annotations/test_precollected_lemur.json')#test_new4class_s.json')
-test_evaluator = dict(ann_file=data_root + 'annotations/test_precollected_lemur.json')#test_indoor9_lin.json')
+test_evaluator = dict(ann_file=data_root + 'annotations/test_precollected_lemur.json')
 
 optim_wrapper = dict(optimizer=dict(lr=base_lr))
 
