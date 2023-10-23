@@ -63,7 +63,7 @@ Note: After the user study, the model will be trained offline using collected da
 #### <span id="4">IV. Dataset
 We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the indoor scenario and wildlife exhibits scenario.
 ##### Indoor scenario: 
-We set up the indoor scenario in a typical office environment. 10 users were guided to collect 20 images for each object in this environment. We included seven object classes: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in seven distinct locations within a controlled environment with stable lighting conditions (see Figure below). Users moved around different locations to collect the images of the objects. 
+We set up the indoor scenario in a typical office environment. 10 users were guided to collect 20 images for each object in this environment. We included seven object classes: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in seven distinct locations within a controlled environment (see Figure below). Users moved around different locations to collect the images of the objects. 
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/7abc914f-ea9e-4a2a-9c44-9c7d1d63c6b9" width="500" alt="Alt text" title="Figure 1. Example images of 7 objects positioned in 7 locations in the indoor scenario. These objects were placed in a controlled environment with stable lighting conditions.">
 </p>
