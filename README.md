@@ -74,7 +74,7 @@ We set up the wildlife exhibits scenario in a local wildlife center. This scenar
   <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" alt="Alt text" title="Figure 2.Example images of 3 lemur species enclosed in 3 distinct exhibits in the wildlife exhibits scenario. Images obtained in this scenario are more complex due to lemurs’ varying poses and sizes, as well as the diverse backgrounds.">
 </p>
 
-We manually labeled all data collected by users (4400 images in total). For the test set, we pre-collected 110 images for each class to capture images under varying lighting and weather conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set and 330 images in the wildlife test set. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Oct.2023.
+We manually labeled all data collected by users (4400 images in total). For the test set, we pre-collected 110 images for each class to capture images under varying lighting and weather conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set and 330 images in the wildlife test set. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Feb.2024.
 The indoor dataset has the same structure as the wildlife exhibits dataset. We take the structure of indoor dataset below for instance:
 ```
 indoor_coco/
