@@ -76,7 +76,7 @@ app = FastAPI()
 
 cfg = Config.fromfile("/path to/mmyolo/configs/custom_dataset/yolov5_s-v61_syncbn_fast_1xb1-30e_lemur.py")
 init_default_scope(cfg.get('default_scope', 'mmyolo'))
-#using source-trained model to increase model performance
+#using source-trained model to increase the capability of feature extractor
 model = init_detector("/path to/mmyolo/configs/custom_dataset/yolov5_s-v61_syncbn_fast_1xb1-30e_lemur.py", "/path to/mmyolo/work_dirs/your pretrained model", device='cuda:0')
 
 target_layers = []
