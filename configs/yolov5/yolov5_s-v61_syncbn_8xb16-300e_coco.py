@@ -169,6 +169,7 @@ train_pipeline = [
         img_scale=img_scale,
         pad_val=114.0,
         pre_transform=pre_transform),
+    #data augmentation that increase data diversity
     dict(
         type='YOLOv5RandomAffine',
         max_rotate_degree=0.0,
