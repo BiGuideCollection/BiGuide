@@ -103,14 +103,14 @@ We compare the distribution of the data collected by CovGuide, FreGuide and BiGu
   <img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/indoor_fre(0.0923)_bi(0.0946).png" width="200" alt="Alt text" title="Figure 4. Data distribution of FreGuide and BiGuide for the indoor scenario.">
 </p>
 <p align="center">
-    <em>Figure 3. Indoor scenario data distribution. Left: FreGuide v.s. CovGuide. Right: FreGuide v.s. BiGuide.</em>
+    <em>Figure 3. Indoor scenario data distribution. Left: FreGuide v.s. CovGuide (small scale). Right: FreGuide v.s. BiGuide (large scale).</em>
 </p>
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/lemur_fre(0.1750)_cov(0.1436).png" width="200" alt="Alt text" title="Figure 5. Data distribution of FreGuide and CovGuide for the wildlife exhibits scenario.">
  <img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/lemur_fre(0.0711)_bi(0.1447).png" width="200" alt="Alt text" title="Figure 6. Data distribution of FreGuide and BiGuide for the wildlife exhibits scenario.">
 </p>
 <p align="center">
-    <em>Figure 4. Wildlife exhibits scenario data distribution. Left: FreGuide v.s. CovGuide. Right: FreGuide v.s. BiGuide.</em>
+    <em>Figure 4. Wildlife exhibits scenario data distribution. Left: FreGuide v.s. CovGuide (small scale). Right: FreGuide v.s. BiGuide (large scale).</em>
 </p>
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
