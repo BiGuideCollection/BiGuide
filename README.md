@@ -74,7 +74,7 @@ We set up the wildlife exhibits scenario in a local wildlife center. This scenar
   <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" alt="Alt text" title="Figure 2.Example images of 3 lemur species enclosed in 3 distinct exhibits in the wildlife exhibits scenario. Images obtained in this scenario are more complex due to lemurs’ varying poses and sizes, as well as the diverse backgrounds.">
 </p>
 
-We manually labeled all data collected by users (4400 images in total). For the test set, we pre-collected 110 images for each class to capture images under varying lighting and weather conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set and 330 images in the wildlife test set. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Feb.2024.
+We manually labeled all data collected by users (4400 images in total). For the test set, we pre-collected 110 images for each class to capture images under varying lighting and weather conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set and 330 images in the wildlife test set. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Mar.2024.
 The indoor dataset has the same structure as the wildlife exhibits dataset. We take the structure of indoor dataset below for instance:
 ```
 indoor_coco/
@@ -89,6 +89,21 @@ indoor_coco/
   -class_with_id.txt
 ```
 The images are named by the time when they were captured.
+
+##### Data Distribution Comparision:
+We compare the distribution of the data collected by CovGuide, FreGuide and BiGuide, and show the distribution comparisons in Figures 3-6. We obtain the data distribution by (1) extracting the image features of all data; (2) using PCA to reduce them into 2 dimensions; and (3) drawing the data points.
+<p align="center">
+  <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" alt="Alt text" title="Figure 3. Data distribution of FreGuide and CovGuide for the indoor scenario.">
+</p>
+<p align="center">
+  <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" alt="Alt text" title="Figure 4. Data distribution of FreGuide and BiGuide for the indoor scenario.">
+</p>
+<p align="center">
+  <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" alt="Alt text" title="Figure 5. Data distribution of FreGuide and CovGuide for the wildlife exhibits scenario.">
+</p>
+<p align="center">
+  <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" alt="Alt text" title="Figure 6. Data distribution of FreGuide and BiGuide for the wildlife exhibits scenario.">
+</p>
 
 #### <span id="5">V. Running BiGuide on Client and Server Devices
 We take the indoor scenario as an example.
