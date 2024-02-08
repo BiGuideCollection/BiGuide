@@ -97,7 +97,7 @@ indoor_coco/
 The images are named by the time when they were captured.
 
 ##### Data Distribution Comparision:
-We compare the distribution of the data collected by CovGuide, FreGuide and BiGuide, and show the distribution comparisons in Figure 3 and Figure 4. We obtain the data distribution by (1) extracting the image features of all data; (2) using PCA to reduce them into 2 dimensions; and (3) drawing the data points.
+We compare the distribution of the data collected by CovGuide, FreGuide and BiGuide, and show the distribution comparisons in Figure 3 and Figure 4. We obtain the data distribution by (1) extracting the image features of all data; (2) using PCA to reduce them into 2 dimensions; and (3) drawing the data points. From the data distribution, we can observe that data collected by BiGuide are much more diverse than the data collected by other baseline systems.
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/indoor_fre(0.1029)_cov(0.0841).png" width="200" alt="Alt text" title="Figure 3. Data distribution of FreGuide and CovGuide for the indoor scenario.">
   <img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/indoor_fre(0.0923)_bi(0.0946).png" width="200" alt="Alt text" title="Figure 4. Data distribution of FreGuide and BiGuide for the indoor scenario.">
