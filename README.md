@@ -1,4 +1,4 @@
-This repository contains the code for the **IPSN 2024** submitted paper: *"BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices"*. 
+This repository contains the code for the **IPSN 2024** accepted paper: *"BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices"*. 
 
 The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mmyolo).
 
