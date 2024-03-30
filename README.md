@@ -1,4 +1,4 @@
-This repository contains download links and the introduction of our collected indoor and lemur datasets, as well as the code for the **IPSN 2024** paper: *"BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices"*. 
+This repository contains download links and the introduction of our collected indoor and lemur datasets, as well as the code for IPSN 2024 paper: *"BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices"* by [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en), [Ying Chen](https://scholar.google.com/citations?hl=en&user=aoMpAKoAAAAJ), Zhehan Qu, Megan McGrath, Erin Ehmke, and [Maria Gorlatova](https://maria.gorlatova.com/bio/). 
 
 The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mmyolo).
 
