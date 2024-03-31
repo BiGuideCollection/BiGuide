@@ -1,8 +1,10 @@
-This repository contains download links and the introduction of our collected indoor and lemur datasets, as well as the code for IPSN 2024 paper: *"BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices"* by [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en), [Ying Chen](https://scholar.google.com/citations?hl=en&user=aoMpAKoAAAAJ), Zhehan Qu, Megan McGrath, Erin Ehmke, and [Maria Gorlatova](https://maria.gorlatova.com/bio/). 
+# BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices
+
+This repository contains download links and the introduction of our collected indoor and lemur datasets, as well as the code for IPSN 2024 paper: ["BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices"]() by [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en), [Ying Chen](https://scholar.google.com/citations?hl=en&user=aoMpAKoAAAAJ), Zhehan Qu, Megan McGrath, Erin Ehmke, and [Maria Gorlatova](https://maria.gorlatova.com/bio/). 
 
 The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mmyolo).
 
-## Outline
+**Outline**:
 * [I. Prerequisites](#1)
 * [II. Post-experiment Survey Questions](#2)
 * [III. User Study Instructions](#3)
@@ -10,7 +12,7 @@ The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mm
 * [V. Running BiGuide on Client and Server Devices](#5)
 
 
-#### <span id="1">I. Prerequisites
+## I. <span id="1"> Prerequisites</span>
 Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites as follows.
 ```
 conda create -n mmyolo python=3.8 pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -y
@@ -31,7 +33,7 @@ Or directly use mmyolo_env.yml to set up the environment.
 conda env create -f mmyolo_env.yml
 ```
 
-#### <span id="2">II. Post-experiment Survey Questions
+## II. <span id="2">Post-experiment Survey Questions</span>
 We assembled a set of questions in different categories for the post-experiment survey to gather feedback. For the category of data acquisition guidance (Q1-Q3), we asked the participants if the designed guidance was easy to understand and follow and the guidance generation was fast. For the category of system experience (Q4-Q8), we asked the participants if the system was helpful and if they felt more confident and more involved when using the system. All questions in these categories were answered on a five-point Likert scale. At the end of the survey, we asked the participants to identify their favorite system and to leave open-ended feedback about the overall experience.
   * Q1: The BiGuide guidance content was easy to understand.
   * Q2: The BiGuide guidance itself was easy to follow.
@@ -42,11 +44,11 @@ We assembled a set of questions in different categories for the post-experiment 
   * Q7: FreGuide made me confident in that I was collecting useful data.
   * Q8: BiGuide made me change poses, locations, and angles more frequently.
     
-#### <span id="3">III. User Study Instructions
+## III. <span id="3">User Study Instructions</span>
 During the user study, each participant began by reviewing a set of instructions we have prepared. The instructions for indoor scenario are the same as the instruction for wildlife exhibits scenario. We take the instructions in indoor scenario below for instance.
-##### Intro
+### III-I. Intro
 The goal of this experiment is to collect diverse data to train a machine-learning model that can detect the class and the bounding box of indoor objects. Seven indoor objects are included in this experiment. They are located in 7 different places in the lab. 
-##### Instructions
+### III-II. Instructions
 Users will collect images by two systems: FreGuide and BiGuide.
 For FreGuide:
 * Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
@@ -60,10 +62,28 @@ For BiGuide system:
 * Users need to take 20 images per object. 
 Note: After the user study, the model will be trained offline using collected data to compare their performance.
 
-#### <span id="4">IV. Dataset
-We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the indoor scenario and wildlife exhibits scenario.
-##### Indoor scenario: 
-We set up the indoor scenario in a typical office environment. 10 users were guided to collect 20 images for each object in this environment. We included seven object classes: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in seven distinct locations within a controlled environment (see Figure below). Users moved around different locations to collect the images of the objects. 
+## IV. <span id="4">Dataset</span>
+We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the **indoor scenario** and **wildlife exhibits scenario**. The detailed information about the collected datasets is presented below.
+
+### IV-I. Indoor Scenario
+We set up the indoor scenario in a typical office environment. **10 users** were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. The details are summarized in the table below:
+
+<table border="0">
+    <tr>
+        <td>Number of users</td><td>10</td>
+    </tr>
+    <tr>
+        <td>Number of object classes</td><td>7</td>
+    </tr>
+    <tr>
+        <td>Number of images per class</td><td>20</td>
+    </tr>
+    <tr>
+        <td><b>Total images</b></td><td>10 x 7 x 20 = 1,400</td>
+    </tr>
+</table>
+
+#### Examples of images in the indoor dataset:
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/7abc914f-ea9e-4a2a-9c44-9c7d1d63c6b9" width="500" alt="Alt text" title="Figure 1. Example images of 7 objects positioned in 7 locations in the indoor scenario. These objects were placed in a controlled environment with stable lighting conditions.">
 </p>
@@ -71,8 +91,25 @@ We set up the indoor scenario in a typical office environment. 10 users were gui
     <em>Figure 1. Example images of 7 objects positioned in 7 locations in the indoor scenario. These objects were placed in a controlled environment with stable lighting conditions.</em>
 </p>
 
-##### Wildlife exhibits scenario: 
-We set up the wildlife exhibits scenario in a local wildlife center. This scenario involved outdoor scenes with dynamic objects, specifically lemurs. 10 users were tasked with capturing 20 images for each lemur species. Three lemur species were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur, as depicted in Figure below. Different lemur species were housed in separate exhibits within the center, requiring users to move between the exhibits. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions.
+### IV-II. Wildlife Exhibit Scenario
+We set up the wildlife exhibit scenario in a local wildlife center. This scenario involved outdoor scenes with dynamic objects, specifically lemurs. **10 users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in separate exhibits within the center, requiring users to move between the exhibits. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. The details are summarized in the table below:
+
+<table border="0">
+    <tr>
+        <td>Number of users</td><td>10</td>
+    </tr>
+    <tr>
+        <td>Number of object classes</td><td>3</td>
+    </tr>
+    <tr>
+        <td>Number of images per class</td><td>20</td>
+    </tr>
+    <tr>
+        <td><b>Total images</b></td><td>10 x 3 x 20 = 600</td>
+    </tr>
+</table>
+
+#### Examples of images in the wildlife exhibit dataset:
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/assets/138166113/6d1495ec-116f-48cc-945d-adf97526ea6d" width="500" alt="Alt text" title="Figure 2.Example images of 3 lemur species enclosed in 3 distinct exhibits in the wildlife exhibits scenario. Images obtained in this scenario are more complex due to lemurs’ varying poses and sizes, as well as the diverse backgrounds.">
 </p>
@@ -80,12 +117,18 @@ We set up the wildlife exhibits scenario in a local wildlife center. This scenar
     <em>Figure 2.Example images of 3 lemur species enclosed in 3 distinct exhibits in the wildlife exhibits scenario. Images obtained in this scenario are more complex due to lemurs’ varying poses and sizes, as well as the diverse backgrounds.</em>
 </p>
 
-We manually labeled all data collected by users (4400 images in total). For the test set, we pre-collected 110 images for each class to capture images under varying lighting and weather conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set and 330 images in the wildlife test set. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Mar.2024.
-The indoor dataset has the same structure as the wildlife exhibits dataset. We take the structure of indoor dataset below for instance:
+### IV-III. Download Indoor and Wildlife Exhibits Datasets
++ The datasets can be downloaded via https://xxx
+
+#### Hierarchical structure of the datasets:
+We manually labeled all data collected by users. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Mar.2024.
+The indoor dataset has the same structure as the wildlife exhibit dataset. We take the structure of indoor dataset for instance.
+The dataset follows a hierarchical file structure shown below. The two sub-folders, ***annotations*** and ***images***, correspond to the annotations and images of the indoor dataset.
+
+- The tree structure of the dataset folder:
 ```
 indoor_coco/
   -annotations/
-    -test_precollected_indoor.json
     -train_biguide_indoor_user1.json
     -train_biguide_indoor_user2.json
     -...
@@ -96,7 +139,7 @@ indoor_coco/
 ```
 The images are named by the time when they were captured.
 
-##### Data Distribution Comparision:
+### IV-IV. Data Distribution Comparision:
 We compare the distribution of the data collected by CovGuide, FreGuide and BiGuide, and show the distribution comparisons in Figure 3 and Figure 4. We obtain the data distribution by (1) extracting the image features of all data; (2) using PCA to reduce them into 2 dimensions; and (3) drawing the data points. From the data distribution, we can observe that data collected by BiGuide are much more diverse than the data collected by other baseline systems.
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/indoor_fre(0.1029)_cov(0.0841).png" width="200" alt="Alt text" title="Figure 3. Data distribution of FreGuide and CovGuide for the indoor scenario.">
@@ -113,9 +156,9 @@ We compare the distribution of the data collected by CovGuide, FreGuide and BiGu
     <em>Figure 4. Wildlife exhibits scenario data distribution. Left: FreGuide v.s. CovGuide (small scale). Right: FreGuide v.s. BiGuide (large scale).</em>
 </p>
 
-#### <span id="5">V. Running BiGuide on Client and Server Devices
+## V. <span id="5">Running BiGuide on Client and Server Devices</span>
 We take the indoor scenario as an example.
-##### 1. Running BiGuide on Server
+### V-I. Running BiGuide on Server
 Change the path in UserStudy_BiGuide_indoor.py to your own path. Then run the command below.
 ```
 cd tools/
@@ -123,5 +166,5 @@ uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
 ```
 Replace ```--host xxx.xxx.x.x --port xxxx``` with your own IP address and port number.
 
-##### 2. Running BiGuide on Mobile Devices
+### V-II. Running BiGuide on Mobile Devices
 When the code on the server is running, you can build the mobile app through Unity with the code in "APP.zip". Then, enjoy your data collection!
