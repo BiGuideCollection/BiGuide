@@ -10,6 +10,8 @@ The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mm
 * [III. User Study Instructions](#3)
 * [IV. Dataset](#4)
 * [V. Running BiGuide on Client and Server Devices](#5)
+* [VI. Citation](#6)
+* [VII. Acknowledgments](#7)
 
 
 ## I. <span id="1"> Prerequisites</span>
@@ -168,3 +170,26 @@ Replace ```--host xxx.xxx.x.x --port xxxx``` with your own IP address and port n
 
 ### V-II. Running BiGuide on Mobile Devices
 When the code on the server is running, you can build the mobile app through Unity with the code in "APP.zip". Then, enjoy your data collection!
+
+## VI. <span id="6">Citation</span>
+Please cite the following paper in your publications if the dataset helps your research.
+
+     @inproceedings{Duan24BiGuide,
+      title={{BiGuide}: A bi-level data acquisition guidance for object detection on mobile devices },
+      author={Duan, Lin and Chen, Ying and Qu, Zhehan and McGrath, Megan and Ehmke, Erin and Gorlatova, Maria},
+      booktitle={Proceedings of the 23rd ACM/IEEE Conference on Information Processing in Sensor Networks},
+      year={2024}
+    }
+
+## VII. <span id="7">Acknowledgments</span>
+
+The authors of this project are [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en), [Ying Chen](https://scholar.google.com/citations?hl=en&user=aoMpAKoAAAAJ), Zhehan Qu, Megan McGrath, Erin Ehmke, and [Maria Gorlatova](https://maria.gorlatova.com/bio/). This work was done in the [Intelligent Interactive Internet of Things Lab](https://maria.gorlatova.com/) at [Duke University](https://www.duke.edu/).
+
+Contact Information of the contributors: 
+
+* lin.duan AT duke.edu
+* ying.chen151 AT me.com
+* zhehan.qu AT duke.edu
+* maria.gorlatova AT duke.edu
+
+We thank Ashley Kwon for her contributions to the project. This work was supported in part by NSF grants CSR-1903136, IIS-2231975, and CNS-1908051, NSF CAREER Award IIS-2046072, Meta Research Award, and Defense Advanced Research Projects Agency Young Faculty Award HR0011-24-1-0001. This paper has been approved for public release; distribution is unlimited. The contents of the paper do not necessarily reflect the position or the policy of the Defense Advanced Research Projects Agency. No official endorsement should be inferred. This is Duke Lemur Center publication \#1586. We gratefully acknowledge the contributions of the Duke Lemur Center and the support provided by the Duke Lemur Center's NSF DBI-2012668 Award.
