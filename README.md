@@ -10,8 +10,6 @@ The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mm
 * [III. User Study Instructions](#3)
 * [IV. Dataset](#4)
 * [V. Running BiGuide on Client and Server Devices](#5)
-* [VI. Citation](#6)
-* [VII. Acknowledgments](#7)
 
 
 ## I. <span id="1"> Prerequisites</span>
@@ -171,7 +169,7 @@ Replace ```--host xxx.xxx.x.x --port xxxx``` with your own IP address and port n
 ### V-II. Running BiGuide on Mobile Devices
 When the code on the server is running, you can build the mobile app through Unity with the code in "APP.zip". Then, enjoy your data collection!
 
-## VI. <span id="6">Citation</span>
+## <span id="6">Citation</span>
 Please cite the following paper in your publications if the dataset helps your research.
 
      @inproceedings{Duan24BiGuide,
@@ -181,7 +179,7 @@ Please cite the following paper in your publications if the dataset helps your r
       year={2024}
     }
 
-## VII. <span id="7">Acknowledgments</span>
+## <span id="7">Acknowledgments</span>
 
 The authors of this project are [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en), [Ying Chen](https://scholar.google.com/citations?hl=en&user=aoMpAKoAAAAJ), Zhehan Qu, Megan McGrath, Erin Ehmke, and [Maria Gorlatova](https://maria.gorlatova.com/bio/). This work was done in the [Intelligent Interactive Internet of Things Lab](https://maria.gorlatova.com/) at [Duke University](https://www.duke.edu/).
 
