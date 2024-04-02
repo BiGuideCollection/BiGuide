@@ -2,70 +2,34 @@
 
 This repository contains download links and the introduction of our collected indoor and lemur datasets, as well as the code for IPSN 2024 paper: ["BiGuide: A Bi-level Data Acquisition Guidance for Object Detection on Mobile Devices"]() by [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en), [Ying Chen](https://scholar.google.com/citations?hl=en&user=aoMpAKoAAAAJ), Zhehan Qu, Megan McGrath, Erin Ehmke, and [Maria Gorlatova](https://maria.gorlatova.com/bio/). 
 
-The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mmyolo).
+## Outline:
+* [Overview](#1)
+* [Demo Video](#2)
+* [Dataset](#3)
+* [BiGuide Implementation](#4)
+* [Related Materials](#5)
+* [Citation](#6)
+* [Acknowledgments](#7)
 
-**Outline**:
-* [I. Prerequisites](#1)
-* [II. Post-experiment Survey Questions](#2)
-* [III. User Study Instructions](#3)
-* [IV. Dataset](#4)
-* [V. Running BiGuide on Client and Server Devices](#5)
+The rest of the repository is organized as follows. [**Section 1**](#1) gives a brief overview of BiGuide. [**Section 2**](#2) shows a short demo video of the data collection process. [**Section 3**](#3) introduces our own collected dataset. [**Section 4**](#4) briefly introduces the implementation of the BiGuide. [**Section 5**](#5) shows the post-experiment survey questions and user study instructions. The citation information, author contacts, and acknowledgments are introduced in [**Section 6**](#6) and [**Section 7**](#7). 
 
+## 1. <span id="1"> Overview</span> 
+<p align="center"><img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/system_design.png" width="580"\></p>
+<p align="center"><strong>Figure 1. Overview of BiGuide design.</strong></p> 
 
-## I. <span id="1"> Prerequisites</span>
-Setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites as follows.
-```
-conda create -n mmyolo python=3.8 pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -y
-conda activate mmyolo
-pip install openmim
-mim install "mmengine>=0.6.0"
-mim install "mmcv>=2.0.0rc4,<2.1.0"
-mim install "mmdet>=3.0.0rc6,<3.1.0"
-git clone https://github.com/open-mmlab/mmyolo.git
-cd mmyolo
-# Install albumentations
-pip install -r requirements/albu.txt
-# Install MMYOLO
-mim install -v -e .
-```
-Or directly use mmyolo_env.yml to set up the environment.
-```
-conda env create -f mmyolo_env.yml
-```
+BiGuide is a data acquisition system that instructs users in collecting diverse and informative data for training OD models. An overview of BiGuide is shown in Figure 1. BiGuide comprises two major components: data importance estimation and guidance generation and adaptation. They are deployed on the edge server such that no significant computation overhead is introduced on the mobile device. In addition to the server, there is a mobile app running on a mobile device which wirelessly sends images captured by the user to the edge, receives real-time data acquisition guidance from the edge, and presents it to the user.
 
-## II. <span id="2">Post-experiment Survey Questions</span>
-We assembled a set of questions in different categories for the post-experiment survey to gather feedback. For the category of data acquisition guidance (Q1-Q3), we asked the participants if the designed guidance was easy to understand and follow and the guidance generation was fast. For the category of system experience (Q4-Q8), we asked the participants if the system was helpful and if they felt more confident and more involved when using the system. All questions in these categories were answered on a five-point Likert scale. At the end of the survey, we asked the participants to identify their favorite system and to leave open-ended feedback about the overall experience.
-  * Q1: The BiGuide guidance content was easy to understand.
-  * Q2: The BiGuide guidance itself was easy to follow.
-  * Q3: The BiGuide guidance displayed fast after pressing the "take the image button".
-  * Q4: BiGuide was helpful for collecting diverse data.
-  * Q5: FreGuide was helpful for collecting diverse data.
-  * Q6: BiGuide made me confident in that I was collecting useful data.
-  * Q7: FreGuide made me confident in that I was collecting useful data.
-  * Q8: BiGuide made me change poses, locations, and angles more frequently.
-    
-## III. <span id="3">User Study Instructions</span>
-During the user study, each participant began by reviewing a set of instructions we have prepared. The instructions for indoor scenario are the same as the instruction for wildlife exhibits scenario. We take the instructions in indoor scenario below for instance.
-### III-I. Intro
-The goal of this experiment is to collect diverse data to train a machine-learning model that can detect the class and the bounding box of indoor objects. Seven indoor objects are included in this experiment. They are located in 7 different places in the lab. 
-### III-II. Instructions
-Users will collect images by two systems: FreGuide and BiGuide.
-For FreGuide:
-* Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
-* Users can tilt their phone or change their position as they want.
-* Users need to take 20 images per object.
-  
-For BiGuide system:
-* Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
-* Users can tilt their phone or change their position as they want.
-* When receiving guidance from the system, users need to follow the guidance to take the photo.
-* Users need to take 20 images per object. 
-Note: After the user study, the model will be trained offline using collected data to compare their performance.
+## 2. <span id="2"> Demo Video</span>
 
-## IV. <span id="4">Dataset</span>
+A short demo video of collecting images using BiGuide is shown below. The demo is performed using a Google Pixel 3 XL mobile phone running Android 11. A Lenovo laptop with an AMD Ryzen 4700H CPU and an NVIDIA GTX 1660 Ti GPU serves as the edge server. The mobile app running on the mobile device sends images to the edge in real time. The edge generates the data acquisition guidance and sends it wirelessly to the mobile device.
+
+**Note: You can find the full demo video (2023 version) on our website by clicking the gif image below.**
+[![Demo](https://github.com/BiGuideCollection/BiGuide/blob/main/images/IMG_3860.gif)](https://sites.duke.edu/linduan/)
+
+## 3. <span id="3"> Dataset</span>
 We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the **indoor scenario** and **wildlife exhibits scenario**. The detailed information about the collected datasets is presented below.
 
-### IV-I. Indoor Scenario
+### 3.1. Indoor Scenario
 We set up the indoor scenario in a typical office environment. **10 users** were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. 14 images have been removed to address privacy concerns. The details are summarized in the table below:
 
 <table border="0">
@@ -91,7 +55,7 @@ We set up the indoor scenario in a typical office environment. **10 users** were
     <em>Figure 1. Example images of 7 objects positioned in 7 locations in the indoor scenario. These objects were placed in a controlled environment with stable lighting conditions.</em>
 </p>
 
-### IV-II. Wildlife Exhibit Scenario
+### 3.2. Wildlife Exhibit Scenario
 We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario involves outdoor scenes with dynamic objects, specifically lemurs. **10 users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in distinct enclosures, requiring users to move between these separate areas. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On warm, sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on cold, rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. 20 images have been removed to address privacy concerns. The details are summarized in the table below:
 
 <table border="0">
@@ -117,7 +81,7 @@ We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario 
     <em>Figure 2.Example images of 3 lemur species enclosed in 3 distinct exhibits in the wildlife exhibits scenario. Images obtained in this scenario are more complex due to lemurs’ varying poses and sizes, as well as the diverse backgrounds.</em>
 </p>
 
-### IV-III. Download Indoor and Wildlife Exhibit Datasets
+### 3.3. Download Indoor and Wildlife Exhibit Datasets
 + The indoor dataset can be downloaded via https://duke.box.com/s/vvblvq6mp8i8gbt6ik2l6rxrscfaukci
 + The wildlife exhibit dataset can be downloaded via https://duke.box.com/s/5iu2er13s0kbmr79e8x81bcv6d160ku5
 
@@ -141,7 +105,7 @@ indoor_coco/
 ```
 The images are named in the order of their capture sequence.
 
-### IV-IV. Data Distribution Comparision:
+### 3.4. Data Distribution Comparision:
 We compare the distribution of the data collected by CovGuide, FreGuide and BiGuide, and show the distribution comparisons in Figure 3 and Figure 4. We obtain the data distribution by (1) extracting the image features of all data; (2) using PCA to reduce them into 2 dimensions; and (3) drawing the data points. From the data distribution, we can observe that data collected by BiGuide are much more diverse than the data collected by other baseline systems.
 <p align="center">
   <img src="https://github.com/BiGuideCollection/BiGuide/blob/main/images/indoor_fre(0.1029)_cov(0.0841).png" width="200" alt="Alt text" title="Figure 3. Data distribution of FreGuide and CovGuide for the indoor scenario.">
@@ -158,20 +122,76 @@ We compare the distribution of the data collected by CovGuide, FreGuide and BiGu
     <em>Figure 4. Wildlife exhibits scenario data distribution. Left: FreGuide v.s. CovGuide (small scale). Right: FreGuide v.s. BiGuide (large scale).</em>
 </p>
 
-## V. <span id="5">Running BiGuide on Client and Server Devices</span>
-We take the indoor scenario as an example.
-### V-I. Running BiGuide on Server
-Change the path in UserStudy_BiGuide_indoor.py to your own path. Then run the command below.
+## 4. <span id="4"> BiGuide Implementation</span>
+
+We implement BiGuide in an edge-based architecture using commodity smartphone as the mobile client. We design a mobile app on smartphones running Android 11 using Unity 2020.3.14f and ARCore 4.1.7. Data importance estimation and guidance generation and adaptation are executed on the edge server with an Intel i7 CPU, an NVIDIA 3080 Ti GPU, and 64GB DDR5-4800 RAM. For data importance estimation, we employ YOLOv5 for fast OD model inference. Communication between the server and smartphones occurs over one-hop 5~GHz WiFi (802.11n), with images resized to $3\times1480\times720$ and JPEG compressed to reduce latency.
+
+### 4.1 Running BiGuide on Server
+The BiGuide implementation is based on [mmyolo](https://github.com/open-mmlab/mmyolo). Please setup the [mmyolo](https://github.com/open-mmlab/mmyolo) prerequisites as follows.
+```
+conda create -n mmyolo python=3.8 pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -y
+conda activate mmyolo
+pip install openmim
+mim install "mmengine>=0.6.0"
+mim install "mmcv>=2.0.0rc4,<2.1.0"
+mim install "mmdet>=3.0.0rc6,<3.1.0"
+git clone https://github.com/open-mmlab/mmyolo.git
+cd mmyolo
+# Install albumentations
+pip install -r requirements/albu.txt
+# Install MMYOLO
+mim install -v -e .
+```
+Or directly use mmyolo_env.yml to set up the environment.
+```
+conda env create -f mmyolo_env.yml
+```
+
+Once the environment is set up, you can run BiGuide, using the indoor scenario as an example. Please modify the path in UserStudy_BiGuide_indoor.py to match your specific file location. After making this adjustment, execute the following command:
 ```
 cd tools/
 uvicorn UserStudy_BiGuide_indoor:app --reload --host xxx.xxx.x.x --port xxxx
 ```
 Replace ```--host xxx.xxx.x.x --port xxxx``` with your own IP address and port number.
 
-### V-II. Running BiGuide on Mobile Devices
+### 4.2. Running BiGuide on Mobile Devices
 When the code on the server is running, you can build the mobile app through Unity with the code in "APP.zip". Then, enjoy your data collection!
 
-## <span id="6">Citation</span>
+## 5. <span id="5"> Related Materials</span>
+
+### 5.1 Post-experiment Survey Questions
+We assembled a set of questions in different categories for the post-experiment survey to gather feedback. For the category of data acquisition guidance (Q1-Q3), we asked the participants if the designed guidance was easy to understand and follow and the guidance generation was fast. For the category of system experience (Q4-Q8), we asked the participants if the system was helpful and if they felt more confident and more involved when using the system. All questions in these categories were answered on a five-point Likert scale. At the end of the survey, we asked the participants to identify their favorite system and to leave open-ended feedback about the overall experience.
+  * Q1: The BiGuide guidance content was easy to understand.
+  * Q2: The BiGuide guidance itself was easy to follow.
+  * Q3: The BiGuide guidance displayed fast after pressing the "take the image button".
+  * Q4: BiGuide was helpful for collecting diverse data.
+  * Q5: FreGuide was helpful for collecting diverse data.
+  * Q6: BiGuide made me confident in that I was collecting useful data.
+  * Q7: FreGuide made me confident in that I was collecting useful data.
+  * Q8: BiGuide made me change poses, locations, and angles more frequently.
+    
+### 5.2. User Study Instructions
+During the user study, each participant began by reviewing a set of instructions we have prepared. The instructions for indoor scenario are the same as the instruction for wildlife exhibits scenario. We take the instructions in indoor scenario below for instance.
+
+#### 5.2.1. Intro
+The goal of this experiment is to collect diverse data to train a machine-learning model that can detect the class and the bounding box of indoor objects. Seven indoor objects are included in this experiment. They are located in 7 different places in the lab. 
+
+#### 5.2.2. Instructions
+Users will collect images by two systems: FreGuide and BiGuide.
+For FreGuide:
+* Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
+* Users can tilt their phone or change their position as they want.
+* Users need to take 20 images per object.
+  
+For BiGuide system:
+* Users hold the phones in portrait  mode, taking pictures in front of the object and moving the phone. 
+* Users can tilt their phone or change their position as they want.
+* When receiving guidance from the system, users need to follow the guidance to take the photo.
+* Users need to take 20 images per object. 
+Note: After the user study, the model will be trained offline using collected data to compare their performance.
+
+## <span id="6"> Citation</span>
+
 Please cite the following paper in your publications if the dataset helps your research.
 
      @inproceedings{Duan24BiGuide,
@@ -181,7 +201,7 @@ Please cite the following paper in your publications if the dataset helps your r
       year={2024}
     }
 
-## <span id="7">Acknowledgments</span>
+## <span id="7"> Acknowledgments</span>
 
 The contributors of the code are [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en) and [Maria Gorlatova](https://maria.gorlatova.com/bio/). For questions on this repository or the related paper, please contact Lin Duan at ld213 [AT] duke [DOT] edu.
 
