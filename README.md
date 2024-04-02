@@ -195,7 +195,7 @@ For BiGuide system:
 * Users need to take 20 images per object. 
 Note: After the user study, the model will be trained offline using collected data to compare their performance.
 
-## <span id="6"> Citation</span>
+## 6. <span id="6"> Citation</span>
 
 Please cite the following paper in your publications if the dataset helps your research.
 
@@ -206,7 +206,7 @@ Please cite the following paper in your publications if the dataset helps your r
       year={2024}
     }
 
-## <span id="7"> Acknowledgments</span>
+## 7. <span id="7"> Acknowledgments</span>
 
 The contributors of the code are [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en) and [Maria Gorlatova](https://maria.gorlatova.com/bio/). For questions on this repository or the related paper, please contact Lin Duan at ld213 [AT] duke [DOT] edu.
 
