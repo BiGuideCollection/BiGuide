@@ -24,6 +24,7 @@ BiGuide is a data acquisition system that instructs users in collecting diverse 
 A short demo video of collecting images using BiGuide is shown below. The demo is performed using a Google Pixel 3 XL mobile phone running Android 11. A Lenovo laptop with an AMD Ryzen 4700H CPU and an NVIDIA GTX 1660 Ti GPU serves as the edge server. The mobile app running on the mobile device sends images to the edge in real time. The edge generates the data acquisition guidance and sends it wirelessly to the mobile device.
 
 **Note: You can find the full demo video (2023 version) on our website by clicking the gif image below.**
+
 [![Demo](https://github.com/BiGuideCollection/BiGuide/blob/main/images/IMG_3860.gif)](https://sites.duke.edu/linduan/)
 
 ## 3. <span id="3"> Dataset</span>
