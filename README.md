@@ -30,22 +30,24 @@ A short demo video of collecting images using BiGuide is shown below. The demo i
 We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the **indoor scenario** and **wildlife exhibits scenario**. The detailed information about the collected datasets is presented below.
 
 ### 3.1. Indoor Scenario
-We set up the indoor scenario in a typical office environment. **10 users** were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. 14 images have been removed to address privacy concerns. The details are summarized in the table below:
+We set up the indoor scenario in a typical office environment. Users were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. 14 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
 
 <table border="0">
     <tr>
-        <td>Number of users</td><td>10</td>
+        <td>Number of BiGuide users</td><td>10</td> <td>Number of FreGuide users</td><td>10</td> <td>Number of CovGuide users</td><td>1</td>
     </tr>
     <tr>
-        <td>Number of object classes</td><td>7</td>
+        <td>Number of object classes</td><td>7</td> <td>Number of object classes</td><td>7</td> <td>Number of object classes</td><td>7</td>
     </tr>
     <tr>
-        <td>Number of images per class</td><td>20</td>
+        <td>Number of images per class</td><td>20</td> <td>Number of images per class</td><td>20</td> <td>Number of images per class</td><td>20</td>
     </tr>
     <tr>
-        <td><b>Total images</b></td><td>10 x 7 x 20 - 14 = 1,388</td>
+        <td><b>Total images</b></td><td>10 x 7 x 20 - 14 = 1,388</td> <td><b>Total images</b></td><td>10 x 7 x 20 = 1,400</td> <td><b>Total images</b></td><td>1 x 7 x 20 = 140</td>
     </tr>
 </table>
+
+To evaluate the performance of models trained on the collected data, we pre-collected 110 images for each class under varying conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set.
 
 #### Examples of images in the indoor dataset:
 <p align="center">
@@ -56,22 +58,24 @@ We set up the indoor scenario in a typical office environment. **10 users** were
 </p>
 
 ### 3.2. Wildlife Exhibit Scenario
-We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario involves outdoor scenes with dynamic objects, specifically lemurs. **10 users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in distinct enclosures, requiring users to move between these separate areas. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On warm, sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on cold, rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. 20 images have been removed to address privacy concerns. The details are summarized in the table below:
+We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario involves outdoor scenes with dynamic objects, specifically lemurs. **Users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in distinct enclosures, requiring users to move between these separate areas. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On warm, sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on cold, rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. 20 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
 
 <table border="0">
     <tr>
-        <td>Number of users</td><td>10</td>
+        <td>Number of BiGuide users</td><td>10</td> <td>Number of FreGuide users</td><td>10</td> <td>Number of CovGuide users</td><td>1</td>
     </tr>
     <tr>
-        <td>Number of object classes</td><td>3</td>
+        <td>Number of object classes</td><td>3</td> <td>Number of object classes</td><td>3</td> <td>Number of object classes</td><td>3</td>
     </tr>
     <tr>
-        <td>Number of images per class</td><td>20</td>
+        <td>Number of images per class</td><td>20</td>  <td>Number of images per class</td><td>20</td>  <td>Number of images per class</td><td>20</td>
     </tr>
     <tr>
-        <td><b>Total images</b></td><td>10 x 3 x 20 - 20 = 580</td>
+        <td><b>Total images</b></td><td>10 x 3 x 20 - 20 = 580</td>  <td><b>Total images</b></td><td>10 x 3 x 20 = 600</td>  <td><b>Total images</b></td><td>1 x 3 x 20 = 60</td>
     </tr>
 </table>
+
+For the wildlife test set, we amassed 330 images in total to evaluate the performance of models trained on the collected data.
 
 #### Examples of images in the wildlife exhibit dataset:
 <p align="center">
