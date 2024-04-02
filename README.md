@@ -134,11 +134,12 @@ indoor_coco/
     -train_biguide_indoor_user2.json
     -...
   -images/
-    -target_2023_MM_DD_hh_mm_ss_XXXXXX.jpg
+    -user1_0.jpg
+    -user1_1.jpg
     -...
   -class_with_id.txt
 ```
-The images are named by the time when they were captured.
+The images are named in the order of their capture sequence.
 
 ### IV-IV. Data Distribution Comparision:
 We compare the distribution of the data collected by CovGuide, FreGuide and BiGuide, and show the distribution comparisons in Figure 3 and Figure 4. We obtain the data distribution by (1) extracting the image features of all data; (2) using PCA to reduce them into 2 dimensions; and (3) drawing the data points. From the data distribution, we can observe that data collected by BiGuide are much more diverse than the data collected by other baseline systems.
