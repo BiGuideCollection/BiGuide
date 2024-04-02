@@ -177,7 +177,7 @@ Please cite the following paper in your publications if the dataset helps your r
      @inproceedings{Duan24BiGuide,
       title={{BiGuide}: A bi-level data acquisition guidance for object detection on mobile devices },
       author={Duan, Lin and Chen, Ying and Qu, Zhehan and McGrath, Megan and Ehmke, Erin and Gorlatova, Maria},
-      booktitle={Proceedings of the 23rd ACM/IEEE Conference on Information Processing in Sensor Networks},
+      booktitle={Proc. IEEE/ACM IPSN},
       year={2024}
     }
 
