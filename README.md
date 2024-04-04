@@ -31,7 +31,7 @@ A short demo video of collecting images using BiGuide is shown below. The demo i
 We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the **indoor scenario** and **wildlife exhibits scenario**. The detailed information about the collected datasets is presented below.
 
 ### 3.1. Indoor Scenario
-We set up the indoor scenario in a typical office environment. Users were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. 14 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
+We set up the indoor scenario in a typical office environment. Users were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. 24 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
 
 <table border="0">
     <tr>
@@ -44,11 +44,11 @@ We set up the indoor scenario in a typical office environment. Users were guided
         <td>Number of images per class</td><td>20</td> <td>Number of images per class</td><td>20</td> <td>Number of images per class</td><td>20</td>
     </tr>
     <tr>
-        <td><b>Total images</b></td><td>10 x 7 x 20 - 14 = 1,388</td> <td><b>Total images</b></td><td>10 x 7 x 20 = 1,400</td> <td><b>Total images</b></td><td>1 x 7 x 20 = 140</td>
+        <td><b>Total images</b></td><td>10 x 7 x 20 - 15 = 1,387</td> <td><b>Total images</b></td><td>10 x 7 x 20 - 11 = 1,389</td> <td><b>Total images</b></td><td>1 x 7 x 20 = 140</td>
     </tr>
 </table>
 
-To evaluate the performance of models trained on the collected data, we pre-collected 110 images for each class under varying conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set.
+To evaluate the performance of models trained on the collected data, we pre-collected 110 images for each class under varying conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set. 2 images have been removed to address privacy concerns.
 
 #### Examples of images in the indoor dataset:
 <p align="center">
