@@ -59,7 +59,7 @@ To evaluate the performance of models trained on the collected data, we pre-coll
 </p>
 
 ### 3.2. Wildlife Exhibit Scenario
-We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario involves outdoor scenes with dynamic objects, specifically lemurs. **Users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in distinct enclosures, requiring users to move between these separate areas. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On warm, sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on cold, rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. 20 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
+We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario involves outdoor scenes with dynamic objects, specifically lemurs. **Users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in distinct enclosures, requiring users to move between these separate areas. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On warm, sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on cold, rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. 23 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
 
 <table border="0">
     <tr>
@@ -72,11 +72,11 @@ We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario 
         <td>Number of images per class</td><td>20</td>  <td>Number of images per class</td><td>20</td>  <td>Number of images per class</td><td>20</td>
     </tr>
     <tr>
-        <td><b>Total images</b></td><td>10 x 3 x 20 - 20 = 580</td>  <td><b>Total images</b></td><td>10 x 3 x 20 = 600</td>  <td><b>Total images</b></td><td>1 x 3 x 20 = 60</td>
+        <td><b>Total images</b></td><td>10 x 3 x 20 - 15 = 585</td>  <td><b>Total images</b></td><td>10 x 3 x 20 - 6 = 594</td>  <td><b>Total images</b></td><td>1 x 3 x 20 - 2 = 58</td>
     </tr>
 </table>
 
-For the wildlife test set, we amassed 330 images in total to evaluate the performance of models trained on the collected data.
+For the wildlife test set, we amassed 330 images in total to evaluate the performance of models trained on the collected data. 13 images have been removed to address privacy concerns.
 
 #### Examples of images in the wildlife exhibit dataset:
 <p align="center">
@@ -87,8 +87,8 @@ For the wildlife test set, we amassed 330 images in total to evaluate the perfor
 </p>
 
 ### 3.3. Download Indoor and Wildlife Exhibit Datasets
-+ The indoor dataset can be downloaded via https://duke.box.com/s/vvblvq6mp8i8gbt6ik2l6rxrscfaukci
-+ The wildlife exhibit dataset can be downloaded via https://duke.box.com/s/5iu2er13s0kbmr79e8x81bcv6d160ku5
++ The indoor dataset can be downloaded via https://duke.box.com/s/r3wjlv4jtp83t4dnc1j9u1jp8nyqltgv
++ The wildlife exhibit dataset can be downloaded via https://duke.box.com/s/elcgsxonsyd39vou1swak7spm5mnh9w4
 
 #### Hierarchical structure of the datasets:
 We manually labeled all data collected by users. Our collected data samples and the annotations samples are in "./data/". Will release the full dataset in Mar.2024.
@@ -103,10 +103,11 @@ indoor_coco/
     -train_biguide_indoor_user2.json
     -...
   -images/
-    -user1_0.jpg
-    -user1_1.jpg
+    -train_biguide_user1_0.jpg
+    -train_biguide_user1_1.jpg
     -...
   -class_with_id.txt
+  -indoor_coco_readme.txt
 ```
 The images are named in the order of their capture sequence.
 
