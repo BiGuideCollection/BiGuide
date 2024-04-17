@@ -31,7 +31,7 @@ A short demo video of collecting images using BiGuide is shown below. The demo i
 We share the data collected using a commodity Google Pixel 3 XL smartphone during the user study in the **indoor scenario** and **wildlife exhibits scenario**. The detailed information about the collected datasets is presented below.
 
 ### 3.1. Indoor Scenario
-We set up the indoor scenario in a typical office environment. Users were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. 24 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
+We set up the indoor scenario in a typical office environment. Users were guided to collect **20 images for each object** in this environment. We included **seven object classes**: mobile phone, scissors, ball, tin can, light bulb, mug, and remote control. These objects were placed in **seven distinct locations** within a controlled environment. Users moved around different locations to collect the images of the objects. 24 images have been removed from the training set to address privacy concerns. The details of the training set are summarized in the table below:
 
 <table border="0">
     <tr>
@@ -48,7 +48,7 @@ We set up the indoor scenario in a typical office environment. Users were guided
     </tr>
 </table>
 
-To evaluate the performance of models trained on the collected data, we pre-collected 110 images for each class under varying conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set. 2 images have been removed to address privacy concerns.
+To evaluate the performance of models trained on the collected data, we pre-collected 110 images for each class under varying conditions to ensure fairness in the evaluation results. In total, we amassed 770 images in the indoor test set. 2 images have been removed from the test set to address privacy concerns.
 
 #### Examples of images in the indoor dataset:
 <p align="center">
@@ -59,7 +59,7 @@ To evaluate the performance of models trained on the collected data, we pre-coll
 </p>
 
 ### 3.2. Wildlife Exhibit Scenario
-We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario involves outdoor scenes with dynamic objects, specifically lemurs. The Duke Lemur Center has various lemur enclosure styles, including forest habitats, but our project focused on a section of summer enclosures on the public tour path. **Users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in distinct enclosures, requiring users to move between these separate areas. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On warm, sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on cold, rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. 23 images have been removed to address privacy concerns. The details of the training set are summarized in the table below:
+We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario involves outdoor scenes with dynamic objects, specifically lemurs. The Duke Lemur Center has various lemur enclosure styles, including forest habitats, but our project focused on a section of summer enclosures on the public tour path. **Users** were tasked with capturing **20 images for each lemur species**. **3 lemur species** were showcased in the center: blue-eyed black lemur, ring-tailed lemur, and red ruffed lemur. Different lemur species were housed in distinct enclosures, requiring users to move between these separate areas. Users’ visits were scheduled at different times on seven different days, aligning with the center’s general tour schedule. This led to users encountering different weather conditions, including sunny and heavily rainy days. On warm, sunny days, the lemurs were more active, engaging in activities like climbing and exploring; on cold, rainy days, the lemurs tended to gather and rest inside their cages. Compared to the images collected in the indoor scenario, the wildlife images present greater complexity and detection challenges due to the lemurs’ varied poses and sizes, occlusion from cages, and unstable lighting conditions. 23 images have been removed from the training set to address privacy concerns. The details of the training set are summarized in the table below:
 
 <table border="0">
     <tr>
@@ -76,7 +76,7 @@ We set up the wildlife exhibit scenario in the Duke Lemur Center. This scenario 
     </tr>
 </table>
 
-For the wildlife test set, we amassed 330 images in total to evaluate the performance of models trained on the collected data. 13 images have been removed to address privacy concerns.
+For the wildlife test set, we amassed 330 images in total to evaluate the performance of models trained on the collected data. 13 images have been removed from the test set to address privacy concerns.
 
 #### Examples of images in the wildlife exhibit dataset:
 <p align="center">
