@@ -211,4 +211,4 @@ Please cite the following paper in your publications if the dataset helps your r
 
 The contributors of the code are [Lin Duan](https://scholar.google.com/citations?user=3KGmyogAAAAJ&hl=en) and [Maria Gorlatova](https://maria.gorlatova.com/bio/). For questions on this repository or the related paper, please contact Lin Duan at ld213 [AT] duke [DOT] edu.
 
-This work was supported in part by NSF grants CSR-1903136, IIS-2231975, and CNS-1908051, NSF CAREER Award IIS-2046072, Meta Research Award, and Defense Advanced Research Projects Agency Young Faculty Award HR0011-24-1-0001. We gratefully acknowledge the contributions of the Duke Lemur Center and the support provided by the Duke Lemur Center's NSF DBI-2012668 Award.
+This work was supported in part by NSF grants CSR-1903136, IIS-2231975, and CNS-1908051, NSF CAREER Award IIS-2046072, Meta Research Award, and Defense Advanced Research Projects Agency Young Faculty Award HR0011-24-1-0001. This is Duke Lemur Center publication #1586. We gratefully acknowledge the contributions of the Duke Lemur Center and the support provided by the Duke Lemur Center's NSF DBI-2012668 Award.
